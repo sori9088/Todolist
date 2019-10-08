@@ -1,0 +1,10 @@
+.done {
+   text-decoration : line-through;
+ }
+
+ .list {
+     display: flex;
+     flex: 2;
+     margin: 5px;
+
+ }
