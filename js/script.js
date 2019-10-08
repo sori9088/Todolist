@@ -1,5 +1,4 @@
 let todolist = [];
-let masterTodoList = [];
 let isDone;
 let num =0;
 
@@ -75,7 +74,7 @@ function remove(id) {
     })
 
     localStorage.setItem('data', JSON.stringify(todolist));
-    
+
     // todolist.splice(index,1);
     renderTodos(todolist);
 }
