@@ -1,10 +1,16 @@
+body {
+   background-image: url('https://mblogthumb-phinf.pstatic.net/20140324_190/liziah_13956351142212kStC_JPEG/_-4.jpeg?type=w2');
+}
+
+.a { color: #FF0000; }
+
 .done {
    text-decoration : line-through;
  }
 
  .list {
      display: flex;
-     flex: 2;
+     flex: 1;
      margin: 5px;
 
  }
@@ -19,4 +25,17 @@
  #input {
 
     border-radius: 20px;
+ }
+
+ #area {
+    
+ }
+
+ .content {
+    width : 600px;
+    top:50%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 20px;
+
  }

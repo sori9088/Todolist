@@ -9,8 +9,8 @@ if(todolist== null){
     todolist=[];
 }else {
     console.log(todolist)
-    renderTodos('kkk');}
-
+    renderTodos('kkk');
+}
 
 function addTodoList() {
 
@@ -31,14 +31,6 @@ function addTodoList() {
 
 }
 
-function getTasks() {
-    return JSON.parse(localStorage.getItem("tasks"));
-  }
-  
-  function save(tasks) {
-    localStorage.setItem("tasks", JSON.stringify(tasks));
-  }
-
 
 function renderTodos(status){
 
@@ -51,13 +43,12 @@ function renderTodos(status){
         todos = todolist
       }
 
-    console.log("this is " ,todos)
     const html = todos.map((item,i) => {
         return `
-        <div class = list>
-        <li onclick="onToggle(${item.id})" class="${item.isDone? 'done' : 'undone'}">
-         ${item.text} 
-        </li>
+        <div class = "list list-group-item list-group-item-action list-group-item-warning">
+        <span onclick="onToggle(${item.id})" class="${item.isDone? 'done' : 'undone'}">
+         ${item.text}&ensp;
+        </span>
         <a href="#" onclick="remove(${item.id})">X</a>
         </div>
         `
@@ -85,6 +76,7 @@ const onToggle = (id) =>{
     })
     curItem.isDone = !curItem.isDone;
     console.log("dd",todolist)
+    localStorage.setItem('data', JSON.stringify(todolist));
     renderTodos();
 
 } 
